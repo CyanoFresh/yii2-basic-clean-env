@@ -1,11 +1,12 @@
 {
-  "minimum-stability": "stable",
+  "minimum-stability": "dev",
+  "prefer-stable": true,
   "require": {
     "php": ">=5.4.0",
-    "yiisoft/yii2": "~2.0.6",
-    "yiisoft/yii2-bootstrap": "*",
-    "yiisoft/yii2-swiftmailer": "*",
-    "rmrevin/yii2-minify-view": "*"
+    "yiisoft/yii2": "~2.0.5",
+    "yiisoft/yii2-bootstrap": "~2.0.0",
+    "yiisoft/yii2-swiftmailer": "~2.0.0",
+    "rmrevin/yii2-minify-view": "^1.15"
   },
   "require-dev": {
     "yiisoft/yii2-debug": "~2.0.0",
