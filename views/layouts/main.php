@@ -45,7 +45,7 @@ AppAsset::register($this);
     ]);
 
     $items = [
-        ['label' => 'Главная', 'url' => ['/site/index']],
+        ['label' => 'Home', 'url' => ['/site/index']],
     ];
 
     echo Nav::widget([
