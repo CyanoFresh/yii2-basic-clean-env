@@ -3,11 +3,14 @@
 $params = require(__DIR__ . '/params.php');
 
 return [
-    'id' => 'el-web',
-    'name' => 'Yii2 EL Template',
+    'id' => 'yii2-web',
     'language' => 'ru',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
+    'aliases' => [
+        '@bower' => '@vendor/bower-asset',
+        '@npm'   => '@vendor/npm-asset',
+    ],
     'components' => [
         'cache' => [
             'class' => 'yii\caching\FileCache',
@@ -40,10 +43,10 @@ return [
             ],
         ],
         'view' => [
-            'class' => 'rmrevin\yii\minify\View',
-            'minify_path' => '@webroot/assets',
-            'js_position' => [\yii\web\View::POS_END],
-            'force_charset' => 'UTF-8',
+            'class' => \rmrevin\yii\minify\View::class,
+            'minifyPath' => '@webroot/assets',
+            'jsPosition' => [\yii\web\View::POS_END],
+            'forceCharset' => 'UTF-8',
         ],
         'formatter' => [
             'dateFormat' => 'dd.MM.yyyy',

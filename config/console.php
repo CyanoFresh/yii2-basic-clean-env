@@ -5,11 +5,15 @@ Yii::setAlias('@tests', dirname(__DIR__) . '/tests/codeception');
 $params = require(__DIR__ . '/params.php');
 
 $config = [
-    'id' => 'el-console',
+    'id' => 'yii2-console',
     'language' => 'en',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'controllerNamespace' => 'app\commands',
+    'aliases' => [
+        '@bower' => '@vendor/bower-asset',
+        '@npm'   => '@vendor/npm-asset',
+    ],
     'components' => [
         'cache' => [
             'class' => 'yii\caching\FileCache',
